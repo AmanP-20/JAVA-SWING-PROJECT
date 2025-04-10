@@ -7,9 +7,9 @@ public class Backend {
     }
     private void runPowerShellCommand(String action, String device) {
         String instanceId = switch (device.toLowerCase()) {
-            case "camera" -> "USB\\VID_3277&PID_0022&MI_00\\6&5C9D285&0&0000";
-            case "keyboard" -> "HID\\VID_3554&PID_FC03&MI_00\\7&C92CDF2&0&0000";
-            case "mouse" -> "HID\\VID_3151&PID_1020&MI_01&COL01\\7&207A0A68&0&0000";
+            case "camera" -> "USB\\VIDXXX"; // -> Add your camera INSTANCEID
+            case "keyboard" -> "HID\\VIDXXXX"; // -> Add  external keyboard INSTANCEID
+            case "mouse" -> "HID\\VIDXXXXX"; // -> Add external mouse INSTANCEID
             default -> "";
         };
         if (instanceId.isEmpty()) return;
